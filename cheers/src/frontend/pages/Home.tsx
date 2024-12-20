@@ -1,9 +1,12 @@
 import React from "react";
 import NavBar from "../components/NavBar/index.tsx";
 import Footer from "../components/Footer/index.tsx";
-//import Footer from "../components/Footer/index.tsx"
+import { useTheme } from "../Contexts/ThemeContext";
 
-export default function Home(){
+const Home: React.FC = () => {
+
+    const {theme} = useTheme()
+
     return(
         <>
             <NavBar />
@@ -12,3 +15,5 @@ export default function Home(){
         </>
     )
 }
+
+export default Home
