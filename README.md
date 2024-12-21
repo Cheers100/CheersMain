@@ -4,25 +4,7 @@
 
 **Guilherme de Almeida Rocha Vieira, guilhermearv3@gmail.com**
 
-**Nome completo do Aluno 2, email do aluno 2**
-
-**Nome completo do Aluno 3, email do aluno 3**
-
-**Nome completo do Aluno 4, email do aluno 4**
-
-**Nome completo do Aluno 5, email do aluno 5**
-
-**Nome completo do Aluno 6, email do aluno 6**
-
----
-
-Professores:
-
-** Prof. Nome do Prof 1 **
-
-** Prof. Nome do Prof 2 **
-
-** Prof. Nome do Prof 3 **
+**Felipe Augusto Pereira de Sousa, felipeaps0918@gmail.com**
 
 ---
 
@@ -32,58 +14,56 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade Cató
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+**Resumo**.  
+
+O presente trabalho apresenta o desenvolvimento de um sistema chamado Nome, que tem como objetivo ser o principal aplicativo de recomendação para bares e restaurantes. O sistema visa facilitar a busca e escolha do “rolê” perfeito para grupos de amigos ou indivíduos que desejam aproveitar momentos de lazer. Por meio de funcionalidades como cadastro de usuários, localização de estabelecimentos, avaliação, comentários e notificações personalizadas, o sistema promove uma experiência intuitiva e eficiente. Como resultado esperado, busca-se não apenas simplificar a escolha de lugares para lazer, mas também oferecer uma plataforma de divulgação acessível para donos de estabelecimentos, otimizando sua visibilidade e atração de público.
 
 ---
 
 
 ## 1. Introdução
 
-_Apresente uma frase introdutória definindo o que será apresentado._
+A Nome será apresentada como uma plataforma inovadora para a conexão entre usuários e estabelecimentos voltados ao lazer gastronômico e social.
 
 ### 1.1 Contextualização
 
-_Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere.
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas)._
+Atualmente, a busca por bares, restaurantes e eventos muitas vezes consome tempo e energia dos usuários, que precisam recorrer a diferentes fontes de informação para encontrar o local ideal. No Brasil, o mercado de bares e restaurantes é uma das áreas mais dinâmicas do setor de serviços, movimentando aproximadamente R$ 250 bilhões por ano, segundo dados da Associação Brasileira de Bares e Restaurantes (ABRASEL)[1.1]. Esse setor emprega mais de 6 milhões de pessoas diretamente e indiretamente. Contudo, essa diversidade de opções também apresenta desafios: consumidores enfrentam dificuldade para comparar lugares, enquanto estabelecimentos menores têm dificuldade em se destacar no mercado.
+
+**[1.1]** - [Setor turístico avança em ações conjuntas para potencializar a gastronomia do Brasil mundo afora](https://abrasel.com.br/revista/mercado-e-tendencias/setor-turistico-avanca-em-acoes-conjuntas-para-potencializar-a-gastronomia-do-brasil-mundo-afora/#:~:text=No%20Brasil%2C%20a%20gastronomia%20movimenta,ano%2C%20segundo%20c%C3%A1lculos%20da%20Abrasel)
 
 ### 1.2 Problema
 
-_Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o trabalho trata. 
-O **problema** pode ser algo vivido em uma empresa específica. Neste caso, o aluno deve rapidamente apresentar 
-o cenário de problema da empresa. A empresa só deve ser citada explicitamente se o aluno tiver autorização 
-para tal._
+A decisão de onde ir, seja para um jantar em grupo, happy hour ou evento especial, pode levar horas de pesquisa e indecisão. Além disso, muitos estabelecimentos não possuem uma plataforma centralizada para se divulgar de forma eficiente. Isso cria uma barreira entre usuários em busca de experiências e estabelecimentos que oferecem esses serviços.
 
 ### 1.3 Objetivo geral
 
-_O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, avaliar, comparar, desenvolver, etc.). No caso específico deste projeto, o objetivo deste trabalho é desenvolver um sistema para automação de processos para um problema específico._
+Desenvolver um sistema para auxiliar usuários a encontrar e escolher bares, restaurantes e eventos próximos, de acordo com suas preferências, ao mesmo tempo em que oferece uma ferramenta prática para a divulgação de estabelecimentos.
 
 #### 1.3.1 Objetivos específicos
 
-_Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar sua prática investigativa, ou como você irá aprofundar seu trabalho._
+- Implementar uma funcionalidade de busca e filtragem por localização, tipo de cozinha, preço e avaliações. 
+- Permitir que usuários avaliem e comentem suas experiências em estabelecimentos.
+- Oferecer um sistema de recomendação personalizado com base no histórico e nas preferências dos usuários.
 
 ### 1.4 Justificativas
 
-_O desenvolvimento de um Sistema de Gerenciamento Agropecuário foi motivado por ser essencial pela significativa contribuição do agronegócio para a economia do Brasil. O setor agropecuário desempenha um papel fundamental não apenas para o abastecimento alimentar, mas também para geração de riqueza, sendo responsável por 50,8% de todas as exportações do Brasil.
-Entretanto, há uma grande disparidade na gestão de recursos entre os grandes produtores e os médios e pequenos produtores. Isso acontece, uma vez que os grandes produtores dispõem de tecnologia avançada para otimizar a eficiência e produtividade, enquanto os médios e pequenos proprietários enfrentam dificuldades no que tange ao gerenciamento de recursos. 
-Por fim, devido à crescente demanda por alimentos e produtos agropecuários, tornou-se fundamental buscar aumentar a produtividade de forma sustentável, exigindo um gerenciamento cada vez mais preciso. Dessa forma, nosso sistema é capaz de auxiliar tanto os médios quando pequenos proprietários, assim como apoia a sustentabilidade do agronegócio._
+O desenvolvimento da Nome é motivado pela crescente demanda por soluções que otimizem a escolha de locais para lazer e pela necessidade de digitalização no setor gastronômico. Bares e restaurantes desempenham um papel significativo na economia e na vida social dos brasileiros, sendo essenciais para o turismo, a cultura e o entretenimento. No entanto, a competitividade no setor exige que estabelecimentos se adaptem às novas tecnologias para atrair e reter clientes. Ao oferecer uma plataforma intuitiva e abrangente, a Nome contribui tanto para os consumidores quanto para os estabelecimentos, promovendo acessibilidade e sustentabilidade nesse mercado.
 
 ## 2. Participantes do processo
 
-_Apresente aqui os perfis dos usuários-chave do sistema. Diversas são as informações que podem ser relevantes para a definição dos perfis dos usuários, tais como idade, gênero, aspectos culturais, nível de educação, entre outros. A pesquisa de mercado pode ser uma ferramenta poderosa para se identificar e caracterizar os perfis de usuários. Apresente claramente o papel a ser desempenhado por cada usuário._
+Usuários gerais: Pessoas em busca de bares, restaurantes e eventos. O público é abrangente, indo desde adolescentes até adultos, que buscam facilidade na escolha de locais para lazer.
+
+Donos de estabelecimentos: Gerentes ou proprietários que desejam divulgar seus negócios, publicar eventos e promoções e acompanhar indicadores de desempenho.
 
 ## 3. Modelagem do processo de negócio
 
 ### 3.1. Análise da situação atual
 
-_Apresente uma descrição textual de como os sistemas atuais resolvem o problema que se propõe a resolver.  Caso sua proposta seja inovadora e não existam processos claramente definidos, **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente**, mesmo que não se utilize tecnologia computacional._
+Atualmente, os usuários recorrem a redes sociais, buscadores e aplicativos segmentados para encontrar estabelecimentos. Contudo, essas ferramentas geralmente apresentam limitações, como falta de integração entre funcionalidades, informações desatualizadas e ausência de personalização.
 
 ### 3.2. Descrição geral da proposta de solução
 
-_Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias._
+A Nome propõe uma solução integrada que centraliza informações de bares, restaurantes e eventos, permitindo a busca e comparação de forma eficiente. O sistema oferecerá funcionalidades avançadas, como filtros detalhados, notificações personalizadas e recomendações baseadas no perfil do usuário. Além disso, donos de estabelecimentos terão acesso a uma plataforma para gerenciar promoções, eventos e visualizar indicadores de desempenho. Essa proposta visa otimizar o tempo do usuário, aumentar a visibilidade dos estabelecimentos e melhorar a experiência geral de lazer.
 
 ### 3.3. Modelagem dos processos
 
@@ -121,22 +101,7 @@ _Apresente aqui a conclusão do seu trabalho. Deve ser apresentada aqui uma disc
 
 # REFERÊNCIAS
 
-_Como um projeto de software não requer revisão bibliográfica, a inclusão das referências não é obrigatória. No entanto, caso você deseje incluir referências relacionadas às tecnologias, padrões, ou metodologias que serão usadas no seu trabalho, relacione-as de acordo com a ABNT._
-
-_Verifique no link abaixo como devem ser as referências no padrão ABNT:_
-
-http://portal.pucminas.br/imagedb/documento/DOC_DSC_NOME_ARQUI20160217102425.pdf
-
-**[1.1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[1.2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[1.3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[1.4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[1.5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
-
+**[1.1]** -_ABRASEL. Setor turístico avança em ações conjuntas para potencializar a gastronomia do Brasil mundo afora. Disponível em: https://abrasel.com.br/revista/mercado-e-tendencias/setor-turistico-avanca-em-acoes-conjuntas-para-potencializar-a-gastronomia-do-brasil-mundo-afora/#:~:text=No%20Brasil%2C%20a%20gastronomia%20movimenta,ano%2C%20segundo%20c%C3%A1lculos%20da%20Abrasel._
 
 
 # APÊNDICES
