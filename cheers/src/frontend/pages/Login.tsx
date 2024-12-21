@@ -1,13 +1,17 @@
 import React from "react";
 import Button from "../components/Button";
-import redirecionar from "../utils/redirecionar";
 import styles from "../styles/Login.module.scss"
-import useChangeTheme from "../hooks/useChangeTheme";
 import { useTheme } from "../Contexts/ThemeContext";
+import Form from "../components/Forms/LoginForm/loginForm";
+import FormData from "../types/FormData/LoginForm";
 
 export default function Login() {
     const { toggleTheme } = useTheme()
     
+    const handleFormSubmit = (data: FormData) => {
+        console.log("Form data submitted: ", data);
+        
+      };
 
     return (
         <>
@@ -16,17 +20,7 @@ export default function Login() {
                 <div className={styles.login}>
                     <section className={styles.forms}>
                         <h1>Login</h1>
-                        <form>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="email" id="email" />
-                            <label htmlFor="password">Senha: </label>
-                            <input type="password" name="password" id="password" />
-                            <Button label="Continuar" onBtnClick={() => ""} />
-                        </form>
-                        
-                        <button onClick={toggleTheme} >
-                            Mudar para Escuro
-                        </button>
+                        <Form onSubmit={handleFormSubmit}/>
 
                         <a href="/cadastro">Não tem uma conta? Sign Up</a>
                     </section>
