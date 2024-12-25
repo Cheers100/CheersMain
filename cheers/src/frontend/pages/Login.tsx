@@ -22,11 +22,14 @@ export default function Login() {
                         <h1>Login</h1>
                         <Form onSubmit={handleFormSubmit}/>
 
-                        <a href="/cadastro">Não tem uma conta? Sign Up</a>
+                        <p>Não tem uma conta? <a href="/cadastro">Sign Up</a></p>
                     </section>
                 </div>
                 <section className={styles.welcome}>
-                    <h2>Bem Vindo de Volta!</h2>
+                    <div>
+                        <h2>Bem Vindo de Volta!</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quia debitis similique ducimus tenetur nulla itaque sequi cupiditate! Sapiente nostrum in modi aliquam asperiores voluptatum fuga mollitia blanditiis quam harum?</p>
+                    </div>
                 </section>
 
             </div>
