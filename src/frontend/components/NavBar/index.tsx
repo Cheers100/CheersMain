@@ -16,7 +16,7 @@ export default function NavBar() {
           Cheers
         </a>
         <Button label="Login" className={style.buttonCadastrar} onBtnClick={() => redirecionar("/login")} />
-        <Button label="Cadastrar" className={style.buttonCadastrar} />
+        <Button label="Cadastrar" className={style.buttonCadastrar} onBtnClick={() => redirecionar("/cadastro")} />
         <Button label="Mudar Tema" onBtnClick={toggleTheme} />
       </div>
     </div>

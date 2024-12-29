@@ -3,9 +3,11 @@ import NavBar from "../components/NavBar/index.tsx";
 import Footer from "../components/Footer/index.tsx";
 import { useTheme } from "../Contexts/ThemeContext";
 import Banner from "../components/Banner/index.tsx";
+import useDocumentTitle from "../hooks/useDocumentTitle.tsx";
 
 const Home: React.FC = () => {
 
+    useDocumentTitle("Cheers")
     const {theme} = useTheme()
 
     return(
