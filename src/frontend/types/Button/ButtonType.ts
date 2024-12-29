@@ -1,5 +1,3 @@
-import Button from "../../components/Button"
-
 interface ButtonType {
     label: string
     type?: "button" | "submit" | "reset"
