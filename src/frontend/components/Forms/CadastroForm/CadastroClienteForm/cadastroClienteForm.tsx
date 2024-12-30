@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FormData from "../../../types/FormData/CadastroClienteForm.ts"
-import Button from "../../Button/index.tsx";
+import FormData from "../../../../types/FormData/CadastroClienteForm.ts"
+import Button from "../../../Button/index.tsx";
 import style from "./cadastroClienteForm.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
@@ -145,13 +145,6 @@ const Form: React.FC<FormProps> = (props) => {
                     </div>
 
                 </div>
-            </div>
-            <div className={style.submitBtn}>
-
-                <Button
-                    label='Cadastrar'
-                    type="submit"
-                />
             </div>
         </form >
     )
