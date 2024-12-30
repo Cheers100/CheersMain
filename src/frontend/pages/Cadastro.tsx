@@ -20,7 +20,7 @@ export default function Cadastro() {
 
       <div className={styles.cards}>
         {/* Card para Cliente */}
-        <div className={`${styles.card} ${styles.cardCliente}`} onClick={() => alert("Cadastrar Cliente")}>
+        <div className={`${styles.card} ${styles.cardCliente}`} onClick={() => redirecionar('/cadastro/cliente')}>
           <iframe
             src="https://www.youtube.com/embed/xPPLbEFbCAo?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&playlist=xPPLbEFbCAo&disablekb=1&rel=0&fs=0"
             className={styles.video}
@@ -47,7 +47,7 @@ export default function Cadastro() {
         </div>
 
         {/* Card para Restaurante */}
-        <div className={`${styles.card} ${styles.cardRestaurante}`} onClick={() => alert("Cadastrar Restaurante")}>
+        <div className={`${styles.card} ${styles.cardRestaurante}`} onClick={() => redirecionar('/cadastro/negocio')}>
           <div className={styles.info}>
             <h2>Sou Restaurante</h2>
             <p>Cadastre seu restaurante e comece a receber pedidos.</p>

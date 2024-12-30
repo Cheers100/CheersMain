@@ -1,0 +1,87 @@
+.form {
+    width: 40%;
+    padding: 1rem;
+
+    .inputs1 {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+
+    }
+
+    .inputs2 {
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .inputs3 {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+
+        .containerInputSenha {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 100%;
+
+            }
+
+            .eyeButton {
+                position: absolute;
+                right: 0.7rem;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                color: #828282;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s ease-out;
+
+                &:hover {
+                    transition: 0.3s ease-in;
+                    color: #000;
+                }
+            }
+
+
+        }
+    }
+
+    .submitBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    display: block;
+}
+
+input {
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+    border: none;
+    outline: none;
+
+    &:focus {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: 0.3s ease;
+    }
+}

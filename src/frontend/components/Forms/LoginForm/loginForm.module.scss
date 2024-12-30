@@ -1,0 +1,36 @@
+.input2 {
+    display: flex;
+    width: 100%;
+
+    .containerInputSenha {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 100%;
+
+        }
+
+        .eyeButton {
+            position: absolute;
+            right: 0.7rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #828282;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s ease-out;
+
+            &:hover {
+                transition: 0.3s ease-in;
+                color: #000;
+            }
+        }
+
+
+    }
+}

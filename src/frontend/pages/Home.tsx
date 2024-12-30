@@ -12,15 +12,17 @@ const Home: React.FC = () => {
     const { theme } = useTheme()
 
     return (
-        <><div className={style.main}>
+        <>
+        <div className={style.main}>
             <NavBar />
-            
-                <Banner
-                    title="Teste"
-                    backgroundImage="https://static.vecteezy.com/ti/vetor-gratis/p1/1410877-banner-de-programacao-e-codificacao-futurista-vetor.jpg"
-                />
-            
-            <Footer /></div >
+
+            <Banner
+                title="Teste"
+                backgroundImage="https://static.vecteezy.com/ti/vetor-gratis/p1/1410877-banner-de-programacao-e-codificacao-futurista-vetor.jpg"
+            />
+
+            <Footer />
+        </div >
         </>
     )
 }

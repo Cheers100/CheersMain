@@ -1,12 +1,16 @@
 import { useState } from "react";
-import  FormData  from "../../../types/FormData/LoginForm.ts"
+import FormData from "../../../types/FormData/LoginForm.ts"
 import Button from "../../Button/index.tsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
+import style from "./loginForm.module.scss"
 
 interface FormProps {
   onSubmit: (data: FormData) => void;
 }
 
 const Form: React.FC<FormProps> = (props) => {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -23,8 +27,8 @@ const Form: React.FC<FormProps> = (props) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    props.onSubmit(formData); 
-    setFormData({ name: "", email: "", password: "" }); 
+    props.onSubmit(formData);
+    setFormData({ name: "", email: "", password: "" });
   };
 
   return (
@@ -50,10 +54,11 @@ const Form: React.FC<FormProps> = (props) => {
         />
       </div>
 
-      <div>
+      <div className={style.input2}>
         <label htmlFor="password">Senha</label>
-        <input
-            type="password"
+        <div className={style.containerInputSenha}>
+          <input
+            type={isPasswordVisible ? "text" : "password"}
             id="password"
             name="password"
             placeholder="Senha"
@@ -68,11 +73,20 @@ const Form: React.FC<FormProps> = (props) => {
             }}
             onInput={(e) => e.currentTarget.setCustomValidity("")}
           />
+
+          <button
+            type="button"
+            className={style.eyeButton}
+            onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+          >
+            <FontAwesomeIcon icon={isPasswordVisible ? faEyeSlash : faEye} />
+          </button>
+        </div>
       </div>
 
       <Button
-      label='Continuar'
-      type="submit"
+        label='Continuar'
+        type="submit"
       />
 
     </form>
