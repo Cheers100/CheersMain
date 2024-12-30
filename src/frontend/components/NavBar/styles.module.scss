@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kay+Pho+Du:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --primary-color: #ffffff;
   --text-color: #000000;
@@ -14,37 +16,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem; 
+  padding: 0 3.5rem; 
   background-color: var(--primary-color);
   color: var(--text-color);
   height: 9vh;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); // Sombra para destaque
-  position: fixed; // Fixa no topo da página
-  width: 100%; // Largura total
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+  position: fixed;
+  width: 100%; 
   z-index: 1000;
 }
 
 .menuEsquerda {
   display: flex;
+  width: 40%;
   align-items: center;
-  gap: 1rem;
+  justify-content: flex-start;
 }
 
 .menuDireita {
   display: flex;
+  width: 60%;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
+  justify-content: end;
 }
 
 .tituloNavbar {
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--login-bg-color);
   transition: color 0.3s;
 
   &:hover {
-    color: var(--login-bg-color); // Destaque ao passar o mouse
+    color: var(--login-bg-color); 
   }
 }
 
@@ -59,11 +65,24 @@
   transition: background-color 0.3s, transform 0.2s;
 
   &:hover {
-    background-color: var(--login-bg-color), 10%; // Escurece no hover
-    transform: scale(1.05); // Efeito de leve aumento
+    background-color: var(--login-bg-color), 10%; 
+    transform: scale(1.05); 
   }
 
   &:active {
-    transform: scale(1); // Remove o efeito ao clicar
+    transform: scale(1); 
   }
 }
+
+.menuLink{
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover{
+    color: var(--login-bg-color);
+    transition: 0.3s ease;
+  }
+}
+
