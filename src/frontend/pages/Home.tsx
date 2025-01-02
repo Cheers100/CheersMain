@@ -1,30 +1,20 @@
-import React from "react";
-import NavBar from "../components/NavBar/index.tsx";
-import Footer from "../components/Footer/index.tsx";
-import { useTheme } from "../Contexts/ThemeContext";
-import Banner from "../components/Banner/index.tsx";
-import useDocumentTitle from "../hooks/useDocumentTitle.tsx";
-import style from "../styles/Home.module.scss"
+import Banner from "../components/Banner"
+import Footer from "../components/Footer"
+import NavBar from "../components/NavBar"
 
-const Home: React.FC = () => {
-
-    useDocumentTitle("Cheers")
-    const { theme } = useTheme()
-
-    return (
+const Home = () =>{
+    return(
         <>
-        <div className={style.main}>
-            <NavBar />
+        <NavBar/>
+        <Banner
+        title="Loja 1"
+        backgroundImage="https://img.freepik.com/vetores-premium/banner-da-web-de-promocao-de-menu-de-restaurante-de-fast-food-ou-folheto-de-marketing-de-midia-social_592861-97.jpg?semt=ais_hybrid"
+        ></Banner>
 
-            <Banner
-                title="Teste"
-                backgroundImage="https://static.vecteezy.com/ti/vetor-gratis/p1/1410877-banner-de-programacao-e-codificacao-futurista-vetor.jpg"
-            />
-
-            <Footer />
-        </div >
+        <Footer/>
         </>
     )
 }
 
 export default Home
+

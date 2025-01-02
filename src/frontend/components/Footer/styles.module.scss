@@ -1,21 +1,9 @@
 .footer {
-    background-color: #1a202c; // Fundo escuro
-    color: #fff;
+    background-color: #ffffff; // Fundo escuro
+    color: #000;
     text-align: center;
     padding: 20px;
     width: 100%;
-  
-    .wave {
-      margin-bottom: -5px;
-      position: relative;
-      svg {
-        height: 80px;
-        width: 100%;
-        path {
-          fill: #031681;
-        }
-      }
-    }
   
     .content {
       display: flex;
@@ -33,7 +21,7 @@
           font-size: 18px;
           margin-bottom: 10px;
           text-transform: uppercase;
-          color: #ffb703; // Cor destaque
+          color: #000; // Cor destaque
         }
   
         ul {
@@ -63,6 +51,6 @@
     .copyright {
       margin-top: 10px;
       font-size: 12px;
-      color: #a0aec0;
+      color: #000;
     }
   }

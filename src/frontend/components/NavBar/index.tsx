@@ -19,7 +19,7 @@ export default function NavBar() {
 
         <a className={style.menuLink} onClick={() => redirecionar("/login")} >Login</a>
         <a className={style.menuLink} onClick={() => redirecionar("/cadastro")} >Cadastro</a>
-        <a className={style.menuLink} onClick={toggleTheme} >Mudar Tema</a>
+        <a className={style.menuLink} onClick={toggleTheme}>Mudar Tema</a>
       </div>
     </div>
   );

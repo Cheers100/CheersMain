@@ -1,9 +1,13 @@
 import Button from "../components/Button";
 import redirecionar from "../utils/redirecionar";
 import styles from "../styles/Cadastro.module.scss"
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 
 export default function Cadastro() {
+
+  useDocumentTitle('Cheers - Cadastro')
+
   return (
     <div className={styles.main}>
       <div className={styles.divTitle}>

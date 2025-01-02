@@ -1,0 +1,41 @@
+.overlay{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); // Fundo escuro semitransparente
+    display: flex;
+    justify-content: center; // Centraliza horizontalmente
+    align-items: center; // Centraliza verticalmente
+    z-index: 1000; // Certifique-se de que está acima de outros elementos
+
+    .main{
+    
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1001; 
+        max-width: 500px;
+        width: 90%; 
+    
+        .header{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0; /* Alinha no final do header */
+                left: 0;
+                width: 100%; /* Faz a linha ocupar toda a largura do header */
+                height: 1px; /* Espessura da linha */
+                background-color: black; /* Cor da linha */
+            }
+        }
+    }
+}

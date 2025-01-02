@@ -2,6 +2,8 @@ package com.cheers.backend.Services;
 
 import com.cheers.backend.Models.User;
 import com.cheers.backend.Repositories.UserRepository;
+import com.cheers.backend.utils.JwtUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -109,7 +111,8 @@ public class UserService {
             return "Senha incorreta";
         }
 
-        return "Login realizado com sucesso!";
+        String token = JwtUtil.generateToken(user.getEmail());
+        return "Login realizado com sucesso! Token: " + token;
     }
 
 }

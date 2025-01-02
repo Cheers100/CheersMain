@@ -15,13 +15,15 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+    private String phone;
 
     public User() {}
-    public User(String firstName, String lastName, String email, String password) {
+    public User(String firstName, String lastName, String email, String password, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.phone = phone;
     }
 
     public Long getId() {
@@ -62,5 +64,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPhone(){
+        return phone;
+    }
+
+    public void setPhone(String phone){
+        this.phone = phone;
     }
 }

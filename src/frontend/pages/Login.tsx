@@ -4,13 +4,16 @@ import styles from "../styles/Login.module.scss"
 import { useTheme } from "../Contexts/ThemeContext";
 import Form from "../components/Forms/LoginForm/loginForm";
 import FormData from "../types/FormData/LoginForm";
+import useDocumentTitle from "../hooks/useDocumentTitle";
+import redirecionar from "../utils/redirecionar";
 
 export default function Login() {
     const { toggleTheme } = useTheme()
-    
+    useDocumentTitle('Cheers - Login')
+
     const handleFormSubmit = (data: FormData) => {
         console.log("Form data submitted: ", data);
-        
+        redirecionar("/home")
       };
 
     return (
