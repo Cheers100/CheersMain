@@ -14,11 +14,12 @@ O presente trabalho apresenta o desenvolvimento de um sistema chamado Nome, que 
 
 ## 1. Introdução
 
-A Nome será apresentada como uma plataforma inovadora para a conexão entre usuários e estabelecimentos voltados ao lazer gastronômico e social.
+A Nome é uma plataforma inovadora que facilita a conexão entre usuários e estabelecimentos focados em lazer gastronômico e social. Quem nunca passou horas discutindo com os amigos sobre o lugar perfeito para se encontrar? A Nome veio para resolver exatamente esse dilema. Aqui, você encontra o rolê ideal para qualquer ocasião: casual, animado, turístico ou até mesmo algo único que se encaixe no seu momento. E mais: com a Nome, você pode descobrir os melhores locais próximos a você, facilitando suas escolhas até mesmo quando estiver viajando.
 
 ### 1.1 Contextualização
 
 Atualmente, a busca por bares, restaurantes e eventos muitas vezes consome tempo e energia dos usuários, que precisam recorrer a diferentes fontes de informação para encontrar o local ideal. No Brasil, o mercado de bares e restaurantes é uma das áreas mais dinâmicas do setor de serviços, movimentando aproximadamente R$ 250 bilhões por ano, segundo dados da Associação Brasileira de Bares e Restaurantes (ABRASEL)[1.1]. Esse setor emprega mais de 6 milhões de pessoas diretamente e indiretamente. Contudo, essa diversidade de opções também apresenta desafios: consumidores enfrentam dificuldade para comparar lugares, enquanto estabelecimentos menores têm dificuldade em se destacar no mercado.
+
 **[1.1]** - [Setor turístico avança em ações conjuntas para potencializar a gastronomia do Brasil mundo afora](https://abrasel.com.br/revista/mercado-e-tendencias/setor-turistico-avanca-em-acoes-conjuntas-para-potencializar-a-gastronomia-do-brasil-mundo-afora/#:~:text=No%20Brasil%2C%20a%20gastronomia%20movimenta,ano%2C%20segundo%20c%C3%A1lculos%20da%20Abrasel)
 
 ### 1.2 Problema
