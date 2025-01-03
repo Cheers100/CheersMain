@@ -1,14 +1,4 @@
-.restaurantsSection {
-    padding: 20px;
-  }
-  
-  .restaurantCardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  .restaurantCard {
+.restaurantCard {
     width: 250px;
     border-radius: 8px;
     overflow: hidden;
@@ -28,11 +18,6 @@
     height: 150px;
     object-fit: cover;
     border-bottom: 2px solid #f4f4f4;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
   }
   
   h3 {

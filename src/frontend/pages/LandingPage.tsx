@@ -4,7 +4,7 @@ import Footer from "../components/Footer/index.tsx";
 import { useTheme } from "../Contexts/ThemeContext.tsx";
 import Banner from "../components/Banner/index.tsx";
 import useDocumentTitle from "../hooks/useDocumentTitle.tsx";
-import style from "../styles/Home.module.scss"
+import style from "../styles/LandingPage.module.scss"
 
 const LandingPage: React.FC = () => {
 
