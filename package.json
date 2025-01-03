@@ -16,9 +16,13 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@types/aos": "^3.0.7",
+    "@types/react-leaflet": "^3.0.0",
     "cheers": "file:",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "leaflet": "^1.9.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0",
+    "react-phone-input-2": "^2.15.1",
     "react-router-dom": "^7.1.1",
     "sass": "^1.83.0"
   },
@@ -31,7 +35,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "typescript": "~5.6.2",
+    "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"
   }
