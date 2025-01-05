@@ -1,6 +1,7 @@
 import style from '../styles/CadastroCliente.module.scss'
 import CadastroClienteForm from '../components/Forms/CadastroForm/CadastroClienteForm/cadastroClienteForm'
 import CadastroEnderecoForm from '../components/Forms/CadastroForm/CadastroEnderecoForm/cadastroEnderecoForm';
+import CadastroFinalizacao from '../components/Forms/CadastroForm/CadastroFinalizacaoForm/cadastroFinalizacaoForm'
 import FormData from '../types/FormData/CadastroClienteForm';
 import ProgressBar from '../components/ProgressBar/progressBar';
 import { useState } from 'react';
@@ -29,7 +30,7 @@ export default function CadastroCliente() {
             case 1:
                 return <CadastroEnderecoForm onSubmit={proximaEtapa} />;
             case 2:
-                return <div>Finalização concluída!</div>;
+                return <CadastroFinalizacao onSubmit={handleFormSubmit}/>;
             default:
                 return null;
         }
