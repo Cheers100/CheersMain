@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 
-// Definindo os tipos das props
+
 interface RestaurantCardProps {
   name: string;
   image: string;
