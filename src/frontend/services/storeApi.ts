@@ -105,3 +105,5 @@ const deleteStore = async (cnpj: string) => {
     }
 
 }
+
+export {createStore, findAllStores, findStore, updateStore, deleteStore}
