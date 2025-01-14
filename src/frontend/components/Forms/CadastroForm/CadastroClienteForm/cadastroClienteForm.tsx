@@ -61,6 +61,7 @@ const Form: React.FC<FormProps> = (props) => {
             placeholder="Informe seu nome"
             value={formData.name}
             onChange={handleChange}
+            required
           />
         </div>
         <div className={style.input}>
@@ -72,6 +73,7 @@ const Form: React.FC<FormProps> = (props) => {
             placeholder="Informe seu sobrenome"
             value={formData.sobrenome}
             onChange={handleChange}
+            required
           />
         </div>
       </div>
@@ -92,6 +94,7 @@ const Form: React.FC<FormProps> = (props) => {
             onInput={(e) => e.currentTarget.setCustomValidity("")}
             value={formData.email}
             onChange={handleChange}
+            required
           />
         </div>
       </div>
@@ -163,6 +166,7 @@ const Form: React.FC<FormProps> = (props) => {
                 )
               }
               onInput={(e) => e.currentTarget.setCustomValidity("")}
+              
             />
             <button
               type="button"

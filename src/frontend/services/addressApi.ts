@@ -84,7 +84,7 @@ const findAddressByCnpj = async (cnpj: string) =>{
 const updateAddress = async (id: number, updadtedAddress: Partial<AddressType>) => {
 
     try{
-        const response = await fetch(`${apiUrl}/{id}`, {
+        const response = await fetch(`${apiUrl}/${id}`, {
             method: "PUT",
             headers:{
                 "Content-Type": "application/json"

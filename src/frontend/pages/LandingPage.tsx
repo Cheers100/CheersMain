@@ -4,7 +4,8 @@ import Footer from "../components/Footer/index.tsx";
 import { useTheme } from "../Contexts/ThemeContext.tsx";
 import Banner from "../components/Banner/index.tsx";
 import useDocumentTitle from "../hooks/useDocumentTitle.tsx";
-import style from "../styles/LandingPage.module.scss"
+import styles from "../styles/LandingPage.module.scss"
+import LandingPageXp from "../components/LandingPageXp/index.tsx";
 
 const LandingPage: React.FC = () => {
 
@@ -13,13 +14,13 @@ const LandingPage: React.FC = () => {
 
     return (
         <>
-        <div className={style.main}>
+        <div className={styles.main}>
             <NavBar />
 
-            <Banner
-                title="Teste"
-                backgroundImage="https://static.vecteezy.com/ti/vetor-gratis/p1/1410877-banner-de-programacao-e-codificacao-futurista-vetor.jpg"
-            />
+            <h1 className={styles.title}>Encontre o seu rolê ideal</h1>
+            <div className={styles.experience}>
+                <LandingPageXp/>
+            </div>
 
             <Footer />
         </div >

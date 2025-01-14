@@ -26,11 +26,11 @@ export default function CadastroCliente() {
     const carregarEtapa = () => {
         switch (etapaAtual) {
             case 0:
-                return <CadastroClienteForm onSubmit={proximaEtapa} />;
+                return <CadastroClienteForm onSubmit={() => proximaEtapa()} />;
             case 1:
                 return <CadastroEnderecoForm onSubmit={proximaEtapa} />;
             case 2:
-                return <CadastroFinalizacao onSubmit={handleFormSubmit}/>;
+                return <CadastroFinalizacao onSubmit={() => handleFormSubmit}/>;
             default:
                 return null;
         }
@@ -39,6 +39,17 @@ export default function CadastroCliente() {
     const handleFormSubmit = (data: FormData) => {
         console.log("Form data submitted: ", data);
 
+    };
+
+    const handleNext = (data: FormData) => {
+        let atributos = Object.keys(data); 
+        let pares: Record<string, string> = {}; 
+
+        atributos.forEach((item) => {
+            pares[item] = data[item as keyof FormData]; 
+        });
+
+        return pares;
     };
 
     return (

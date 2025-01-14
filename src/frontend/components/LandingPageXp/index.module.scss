@@ -1,0 +1,20 @@
+@import "leaflet/dist/leaflet.css";
+
+
+.main{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1rem;
+
+    .title{
+        color: black;
+    }
+    .map {
+        height: 400px;
+        width: 50%;
+        border: 1px solid #ccc; /* Opcional: borda ao redor do mapa */
+        border-radius: 8px; /* Opcional: cantos arredondados */
+    }
+}

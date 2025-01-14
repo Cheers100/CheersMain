@@ -7,6 +7,7 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from 'react-leaflet';
+import usePosition from '../../../../hooks/usePosition';
 
 interface FormProps {
     onSubmit: (data: FormData) => void;
@@ -22,7 +23,8 @@ const Form: React.FC<FormProps> = (props) => {
         complementoRes: "",
     });
 
-    const [position, setPosition] = useState<[number, number] | null>(null);
+    
+    const {position, error} = usePosition()
     const [isEditing, setIsEditing] = useState(false);
 
     const fetchAddress = async (latitude: number, longitude: number) => {
@@ -49,21 +51,10 @@ const Form: React.FC<FormProps> = (props) => {
 
     useEffect(() => {
         if (position) {
-            fetchAddress(position[0], position[1]);
+            fetchAddress(position.latitude, position.longitude);
         }
     }, [position]);
 
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition(
-            (location) => {
-                const { latitude, longitude } = location.coords;
-                setPosition([latitude, longitude]);
-            },
-            (error) => {
-                console.error("Erro ao obter localização:", error.message);
-            }
-        );
-    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -79,7 +70,9 @@ const Form: React.FC<FormProps> = (props) => {
     };
 
     const LocationMarker = () => {
+        const [position, setPosition] = useState<[number, number] | null>(null);
         const map = useMap();
+
         useEffect(() => {
             if (position) {
                 map.setView(position, 13);
@@ -92,7 +85,7 @@ const Form: React.FC<FormProps> = (props) => {
             },
         });
 
-        return position ? <Marker position={position} /> : null;
+        return position ? <Marker position={position}/> : null;
     };
 
     return (
