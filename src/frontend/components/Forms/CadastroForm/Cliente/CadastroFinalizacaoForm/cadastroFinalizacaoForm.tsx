@@ -1,5 +1,5 @@
 import style from "./cadastroFinalizacaoForm.module.scss";
-import FormData from "../../../../types/FormData/CadastroFinalizacaoForm";
+import FormData from "../../../../../types/FormData/CadastroFinalizacaoForm";
 import { useState } from "react";
 
 interface FormProps {
@@ -46,7 +46,7 @@ const Form: React.FC<FormProps> = (props) => {
     ];
 
     return (
-        <form onSubmit={handleSubmit} className={style.formContainer}>
+        <form className={style.formContainer}>
             <section className={style.section}>
                 <h2>O que você quer comer?</h2>
                 <div className={style.cardsContainer}>
@@ -59,7 +59,7 @@ const Form: React.FC<FormProps> = (props) => {
                         >
                             <span>{cardapio.label}</span>
                         </div>
-                    ))} 
+                    ))}
                 </div>
             </section>
 
@@ -79,7 +79,7 @@ const Form: React.FC<FormProps> = (props) => {
                 </div>
             </section>
 
-            <button type="submit" className={style.submitButton}>
+            <button type="submit" onSubmit={handleSubmit} className={style.submitButton}>
                 Finalizar
             </button>
         </form>

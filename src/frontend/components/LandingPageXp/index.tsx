@@ -1,45 +1,44 @@
-import styles from "./index.module.scss"
+import styles from "./index.module.scss";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import usePosition from "../../hooks/usePosition";
 
-const LandingPageXp = () =>{
-    
-    const position = usePosition()?.position
+const LandingPageXp = () => {
+    const position = usePosition()?.position;
 
-    const initialPosition: [number, number] = position ? [position.latitude, position.longitude] : [-23,-46]
+    const initialPosition: [number, number] = position
+        ? [position.latitude, position.longitude]
+        : [-23, -46]; // Posição padrão
 
-    return(
-        <>
-            <div className={styles.main}>
-                <section className={styles.search}>
-                   
-                    <input type="text" name="search" id="search" />
-                    <select name="searchR" id="searchR"></select>
-                </section>
-                <section className={styles.map}>
-                <MapContainer
+    return (
+        <div className={styles.main}>
+            <section className={styles.map}>
+                <div className={styles.search}>
+                    <h1>Encontre o seu rolê ideal</h1>
+                    <input type="text" name="search" id="search" placeholder="Digite aqui..." />
+                    <select name="searchR" id="searchR">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+                <div className={styles.mapContainer}>
+                    <MapContainer
+                        className={styles.leafletContainer}
                         center={initialPosition}
                         zoom={13}
-                        style={{ height: "400px", width: "100%" }} // Tamanho do mapa
+                        style={{ height: "100%", width: "100%" }}
                     >
-                        {/* Camada do Mapa */}
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution="&copy; OpenStreetMap contributors"
                         />
-                        {/* Um marcador de exemplo */}
                         <Marker position={initialPosition}>
-                            <Popup>
-                                Aqui está o seu marcador inicial! 🚀
-                            </Popup>
+                            <Popup>Aqui está o seu marcador inicial! 🚀</Popup>
                         </Marker>
                     </MapContainer>
-                </section>
-            </div>
-        </>
-    )
+                </div>
+            </section>
+        </div>
+    );
+};
 
-}
-
-export default LandingPageXp
+export default LandingPageXp;

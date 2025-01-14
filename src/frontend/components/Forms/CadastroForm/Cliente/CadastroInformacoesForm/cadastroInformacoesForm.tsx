@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FormData from "../../../../types/FormData/CadastroClienteForm.ts";
-import Button from "../../../Button/index.tsx";
-import style from "./cadastroClienteForm.module.scss";
+import FormData from "../../../../../types/FormData/CadastroClienteForm.ts";
+import Button from "../../../../Button/index.tsx";
+import style from "./cadastroInformacoesForm.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +18,7 @@ const Form: React.FC<FormProps> = (props) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     sobrenome: "",
-    phone:"",
+    phone: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -36,15 +36,15 @@ const Form: React.FC<FormProps> = (props) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    props.onSubmit(formData); 
+    props.onSubmit(formData);
     setFormData({
       name: "",
       sobrenome: "",
-      phone:"",
+      phone: "",
       email: "",
       password: "",
       confirmPassword: "",
-      
+
     });
     setPhone("");
   };
@@ -166,7 +166,7 @@ const Form: React.FC<FormProps> = (props) => {
                 )
               }
               onInput={(e) => e.currentTarget.setCustomValidity("")}
-              
+
             />
             <button
               type="button"

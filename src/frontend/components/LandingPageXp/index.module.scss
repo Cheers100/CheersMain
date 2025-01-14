@@ -1,20 +1,66 @@
 @import "leaflet/dist/leaflet.css";
 
-
-.main{
-    
+.main {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 1rem;
+    flex-direction: column;
+    margin-top: 10rem;
+    justify-content: center;
+    align-items: center;
 
-    .title{
-        color: black;
-    }
     .map {
+        position: relative;
+        width: 80%;
         height: 400px;
-        width: 50%;
-        border: 1px solid #ccc; /* Opcional: borda ao redor do mapa */
-        border-radius: 8px; /* Opcional: cantos arredondados */
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+            z-index: 2;
+            pointer-events: none; // Evita bloquear interações no mapa
+        }
+
+        .search {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; // Sobre o gradiente
+            text-align: center;
+
+            h1 {
+                color: white;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            input,
+            select {
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .leafletContainer {
+            position: relative;
+            z-index: 1; // Sob o gradiente, mas acima do fundo
+            height: 100%;
+            width: 100%;
+        }
     }
 }

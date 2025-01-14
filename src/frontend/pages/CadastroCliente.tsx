@@ -1,7 +1,7 @@
 import style from '../styles/CadastroCliente.module.scss'
-import CadastroClienteForm from '../components/Forms/CadastroForm/CadastroClienteForm/cadastroClienteForm'
-import CadastroEnderecoForm from '../components/Forms/CadastroForm/CadastroEnderecoForm/cadastroEnderecoForm';
-import CadastroFinalizacao from '../components/Forms/CadastroForm/CadastroFinalizacaoForm/cadastroFinalizacaoForm'
+import CadastroClienteForm from '../components/Forms/CadastroForm/Cliente/CadastroInformacoesForm/cadastroInformacoesForm'
+import CadastroEnderecoForm from '../components/Forms/CadastroForm/Cliente/CadastroEnderecoForm/cadastroEnderecoForm';
+import CadastroFinalizacao from '../components/Forms/CadastroForm/Cliente/CadastroFinalizacaoForm/cadastroFinalizacaoForm'
 import FormData from '../types/FormData/CadastroClienteForm';
 import ProgressBar from '../components/ProgressBar/progressBar';
 import { useState } from 'react';
@@ -30,7 +30,7 @@ export default function CadastroCliente() {
             case 1:
                 return <CadastroEnderecoForm onSubmit={proximaEtapa} />;
             case 2:
-                return <CadastroFinalizacao onSubmit={() => handleFormSubmit}/>;
+                return <CadastroFinalizacao onSubmit={() => handleFormSubmit} />;
             default:
                 return null;
         }
@@ -42,11 +42,11 @@ export default function CadastroCliente() {
     };
 
     const handleNext = (data: FormData) => {
-        let atributos = Object.keys(data); 
-        let pares: Record<string, string> = {}; 
+        let atributos = Object.keys(data);
+        let pares: Record<string, string> = {};
 
         atributos.forEach((item) => {
-            pares[item] = data[item as keyof FormData]; 
+            pares[item] = data[item as keyof FormData];
         });
 
         return pares;

@@ -1,5 +1,5 @@
 import style from './cadastroEnderecoForm.module.scss';
-import FormData from '../../../../types/FormData/CadastroEnderecoForm';
+import FormData from '../../../../../types/FormData/CadastroEnderecoForm';
 import { useState, useEffect } from 'react';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,7 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from 'react-leaflet';
-import usePosition from '../../../../hooks/usePosition';
+import usePosition from '../../../../../hooks/usePosition';
 
 interface FormProps {
     onSubmit: (data: FormData) => void;

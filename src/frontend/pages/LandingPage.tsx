@@ -14,16 +14,16 @@ const LandingPage: React.FC = () => {
 
     return (
         <>
-        <div className={styles.main}>
-            <NavBar />
+            <div className={styles.main}>
+                <NavBar />
 
-            <h1 className={styles.title}>Encontre o seu rolê ideal</h1>
-            <div className={styles.experience}>
-                <LandingPageXp/>
-            </div>
-
-            <Footer />
-        </div >
+                <div className={styles.secao1}>
+                    <div className={styles.experience}>
+                        <LandingPageXp />
+                    </div>
+                </div>
+                <Footer />
+            </div >
         </>
     )
 }
