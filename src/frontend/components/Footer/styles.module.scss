@@ -31,9 +31,11 @@
           li {
             margin: 8px 0;
             font-size: 14px;
+            transition: 0.2s ease;
   
             &:hover {
-              color: #ffb703; // Efeito ao passar o mouse
+              color: #FCA46C;
+              transition: 0.2s ease;
               cursor: pointer;
             }
           }
