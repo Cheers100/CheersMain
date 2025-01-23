@@ -74,18 +74,30 @@
                     padding: 1rem;
                     width: 100%;
 
-                    .logoRestaurant {
-                        width: 5rem;
-                        height: 5rem;
-                        border-radius: 50%;
-                        border: 1px solid #ccc;
-                    }
+                    .divLogo {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
 
-                    .restaurantName {}
+
+                        .logoRestaurant {
+                            width: 5rem;
+                            height: 5rem;
+                            border-radius: 50%;
+                            border: 1px solid #ccc;
+                        }
+
+                        .restaurantName {
+                            padding-left: 1rem;
+
+                        }
+
+                    }
 
                     .divStars {
                         display: flex;
                         align-items: center;
+                        margin-top: 1rem;
 
                         .starIcon {
                             color: #FCA46C;
@@ -107,8 +119,8 @@
         .linha {
             width: 100%;
             margin-top: 5rem;
-            border: 0.1px solid #aaa;
-            opacity: 0.5;
+            border: 1px solid #aaa;
+            opacity: 0.3;
         }
 
         .itens2 {

@@ -8,9 +8,14 @@ import styles from "../styles/LandingPage.module.scss"
 import LandingPageXp from "../components/LandingPageXp/index.tsx";
 import Button from "../components/Button/index.tsx";
 import RestaurantCard from "../features/restaurants/Components/RestaurantCard.tsx";
+import Carousel from "../components/Carousel/index.tsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+
+import { bestRestaurantsData } from "../utils/LandingPageData/BestRestaurantsData.tsx";
+import { bestByRoleTypeData } from "../utils/LandingPageData/bestByRoleType.tsx";
+import { carouselData } from "../utils/LandingPageData/carouselData.tsx";
 
 
 const LandingPage: React.FC = () => {
@@ -18,83 +23,11 @@ const LandingPage: React.FC = () => {
     useDocumentTitle("Cheers")
     const { theme } = useTheme()
 
-    const cardsBestRestaurant = [
-        {
-            name: "Outback Steakhouse",
-            logo: "https://iguatemi.com.br/campinas/sites/campinas/files/logo-1360166060533.png",
-            stars: 4.5,
-            roleType: "Casual"
-        },
-        {
-            name: "Coco Bambu",
-            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnaTMw1qNuErqy7GjE6PTrKfnDIQ57tl45vw&s",
-            stars: 4.7,
-            roleType: "Família e Eventos"
-        },
-        {
-            name: "Subway",
-            logo: "https://gkpb.com.br/wp-content/uploads/2016/08/novo-logo-subway-blog-gkpb.jpg",
-            stars: 4.2,
-            roleType: "Fast Food"
-        },
-        {
-            name: "Madeiro",
-            logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Logo_Madero.jpg",
-            stars: 4.6,
-            roleType: "Hamburgueria Premium"
-        },
-        {
-            name: "Habbib's",
-            logo: "https://upload.wikimedia.org/wikipedia/pt/b/b1/Novo-logo.png",
-            stars: 4.0,
-            roleType: "Comida Árabe Rápida"
-        }
-    ];
+    const bestRestaurants = bestRestaurantsData.restaurants || []
 
-    const cardsByRoleType = [
-        {
-            name: "Bar do Zeca",
-            logo: "https://via.placeholder.com/150",
-            stars: 4.3,
-            roleType: "Happy Hour",
-            description: "Ambiente descontraído com música ao vivo e drinks incríveis."
-        },
-        {
-            name: "La Trattoria",
-            logo: "https://via.placeholder.com/150",
-            stars: 4.8,
-            roleType: "Jantar",
-            description: "Restaurante italiano com pratos sofisticados e carta de vinhos selecionada."
-        },
-        {
-            name: "Clube Infinity",
-            logo: "https://via.placeholder.com/150",
-            stars: 4.6,
-            roleType: "Balada",
-            description: "Balada premium com DJs internacionais e estrutura de ponta."
-        },
-        {
-            name: "Café Urbano",
-            logo: "https://via.placeholder.com/150",
-            stars: 4.5,
-            roleType: "Casual",
-            description: "Café moderno com opções rápidas e ambiente acolhedor."
-        },
-        {
-            name: "Salão Royal",
-            logo: "https://via.placeholder.com/150",
-            stars: 4.7,
-            roleType: "Eventos",
-            description: "Espaço para eventos com serviço de buffet completo e decoração temática."
-        },
-        {
-            name: "Cantinho Vegano",
-            logo: "https://via.placeholder.com/150",
-            stars: 4.4,
-            roleType: "Outros",
-            description: "Restaurante vegano com opções saudáveis e sabor único."
-        }
-    ];
+    const bestByRoleType = bestByRoleTypeData.restaurants || []
+
+    const carouselSlides = carouselData.slides || []
 
 
     return (
@@ -128,10 +61,12 @@ const LandingPage: React.FC = () => {
                     <div className={styles.itens1}>
                         <h2 className={styles.itensTittle}>Os melhores restaurantes</h2>
                         <div className={styles.cardsContainer}>
-                            {cardsBestRestaurant.map(restaurant => (
+                            {bestRestaurants.map(restaurant => (
                                 <div key={restaurant.name} className={styles.cardRestaurant}>
-                                    <img src={restaurant.logo} alt={`${restaurant.name} Logo`} className={styles.logoRestaurant} />
-                                    <h3 className={styles.restaurantName}>{restaurant.name}</h3>
+                                    <div className={styles.divLogo}>
+                                        <img src={restaurant.logo} alt={`${restaurant.name} Logo`} className={styles.logoRestaurant} />
+                                        <h3 className={styles.restaurantName}>{restaurant.name}</h3>
+                                    </div>
                                     <div className={styles.divStars}>
                                         <FontAwesomeIcon icon={faStar} className={styles.starIcon} />
                                         <p className={styles.starsText}>{restaurant.stars}</p>
@@ -142,11 +77,13 @@ const LandingPage: React.FC = () => {
                         </div>
                     </div>
 
+                    <Carousel items={carouselSlides} customStyles={{}} />
+
                     <hr className={styles.linha} />
                     <div className={styles.itens2}>
                         <h2 className={styles.itensTittle}>Os melhores por tipo de rolê</h2>
                         <div className={styles.cardsContainer}>
-                            {cardsByRoleType.map((card) => (
+                            {bestByRoleType.map((card) => (
                                 <div key={card.name} className={styles.cardRoleType}>
                                     <img
                                         src={card.logo}
