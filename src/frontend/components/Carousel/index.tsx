@@ -4,9 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '../Button';
+import { CarouselType } from '../../types/Carousel/CarouselType';
 
-export default function Carousel({ items, customStyles }) {
-    const settings = {
+const Carousel:React.FC<CarouselType> = ({ items, customStyles, customSettings }) => {
+    const defaultSettings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -33,6 +34,8 @@ export default function Carousel({ items, customStyles }) {
             },
         ],
     };
+
+    const settings = { ...defaultSettings, ...customSettings };
 
     return (
         <div className={`${styles.container} ${customStyles?.container}`}>
@@ -72,3 +75,5 @@ export default function Carousel({ items, customStyles }) {
         </div>
     );
 }
+
+export default Carousel

@@ -13,9 +13,9 @@ import Carousel from "../components/Carousel/index.tsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-import { bestRestaurantsData } from "../utils/LandingPageData/BestRestaurantsData.tsx";
-import { bestByRoleTypeData } from "../utils/LandingPageData/bestByRoleType.tsx";
-import { carouselData } from "../utils/LandingPageData/carouselData.tsx";
+import { bestRestaurantsData } from "../data/LandingPageData/BestRestaurantsData.tsx";
+import { bestByRoleTypeData } from "../data/LandingPageData/bestByRoleType.tsx";
+import { carouselData } from "../data/LandingPageData/carouselData.tsx";
 
 
 const LandingPage: React.FC = () => {
