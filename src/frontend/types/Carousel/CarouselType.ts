@@ -6,6 +6,6 @@ export interface CarouselType{
         [key: string]: string | undefined;
     }
     customSettings: {
-        [key: string]: string | undefined;
+        [key: string]: string | number | boolean | Object | undefined;
     }
 }

@@ -1,5 +1,6 @@
 .container {
     position: relative;
+    margin-top: 3rem;
 
     .itemContainer {
         padding: 1rem;
@@ -70,9 +71,68 @@
 
 
     }
-
-
-
-
-
 }
+
+
+// Estilo base para o container do carrossel
+.customContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Estilo para os itens do carrossel
+  .customItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .customItem {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+  
+  // Estilo para ícones no carrossel
+  .customIcon {
+    font-size: 24px;
+    color: #4caf50;
+    margin-bottom: 10px;
+  }
+  
+  // Estilo para imagens
+  .customImg {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  // Estilo para os títulos
+  .customTitle {
+    font-size: 18rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  // Estilo para descrições
+  .customDescription {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 0 10px;
+  }

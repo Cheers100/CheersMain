@@ -77,7 +77,14 @@ const LandingPage: React.FC = () => {
                         </div>
                     </div>
 
-                    <Carousel items={carouselSlides} customStyles={{}} />
+                    <Carousel items={carouselSlides} customStyles={{}} customSettings={{
+                        slidesToShow: 1,
+                        autoplay: true,
+                        autoplaySpeed: 2300,
+                        pauseOnHover: true,
+                        dots: true,
+                        infinite: true,
+                    }} />
 
                     <hr className={styles.linha} />
                     <div className={styles.itens2}>
