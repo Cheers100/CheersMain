@@ -8,6 +8,7 @@ import styles from "../styles/LandingPage.module.scss"
 import LandingPageXp from "../components/LandingPageXp/index.tsx";
 import Button from "../components/Button/index.tsx";
 import RestaurantCard from "../features/restaurants/Components/RestaurantCard.tsx";
+
 import Carousel from "../components/Carousel/index.tsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

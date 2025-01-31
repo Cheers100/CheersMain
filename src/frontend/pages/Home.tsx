@@ -5,7 +5,8 @@ import RestaurantCard from "../features/restaurants/Components/RestaurantCard";
 import styles from "../styles/Home.module.scss";
 import { HomeSectionsData } from "../data/HomeData/HomeSectionsData";
 import { HomeSection } from "../types/Section/HomeSection";
-import Carousel from "../components/Carousel";
+
+import CarouselSecoes from "../features/Carousel/index";
 
 const Home = () => {
 
@@ -25,46 +26,24 @@ const Home = () => {
                 {HomeSectionsData.map((section: HomeSection, index: number) => (
                     <div key={index} className={styles.section}>
                         <h2 className={styles.sectionTitle}>{section.sectionTitle}</h2>
-                        <Carousel items={section.items} customSettings={{
+                        <div className={styles.carouselContainer}>
+                            <CarouselSecoes items={section.items}
+                                customSettings={{
+                                    slidesPerView: 2,
+                                    spaceBetween: 10,
+                                }}
 
-                            dots: true,
-                            infinite: true,
-                            speed: 500,
-                            slidesToShow: 10,
-                            slidesToScroll: 1,
-                            responsive: [
-                                {
-                                    breakpoint: 1024,
-                                    settings: {
-                                        slidesToShow: 10,
-                                    },
-                                },
-                                {
-                                    breakpoint: 768,
-                                    settings: {
-                                        slidesToShow: 7,
-                                    },
-                                },
-                                {
-                                    breakpoint: 480,
-                                    settings: {
-                                        slidesToShow: 5,
-                                    },
-                                },
-                            ],
-
-                        }}
-
-                            customStyles={{
-                                container: 'customContainer',
-                                itemContainer: 'customItemContainer',
-                                item: 'customItem',
-                                icon: 'customIcon',
-                                img: 'customImg',
-                                title: 'customTitle',
-                                description: 'customDescription',
-                            }} />
-
+                                customStyles={{
+                                    container: "meu-container",
+                                    swiper: "meu-swiper",
+                                    itemContainer: "meu-item-container",
+                                    item: "meu-item",
+                                    img: "minha-imagem",
+                                    title: "meu-titulo",
+                                    description: "minha-descricao",
+                                    btnContainer: "meu-botao-container",
+                                }} />
+                        </div>
                     </div>
                 ))}
 

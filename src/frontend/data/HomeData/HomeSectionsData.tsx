@@ -5,31 +5,31 @@ export const HomeSectionsData = [
             {
                 title: "Bar do João",
                 description: "Um ótimo lugar para relaxar e aproveitar com os amigos.",
-                image: "bar-do-joao.jpg",
+                image: "https://media-cdn.tripadvisor.com/media/photo-s/19/be/01/f5/the-lounge-bar.jpg",
 
             },
             {
                 title: "Café Central",
                 description: "O melhor café da cidade!",
-                image: "cafe-central.jpg",
+                image: "https://gdeuropa.b-cdn.net/wp-content/uploads/2014/07/cafe-central-pessoas-viena.jpg",
 
             },
             {
                 title: "Sorveteria Tropical",
                 description: "Os sorvetes mais refrescantes da região.",
-                image: "sorveteria-tropical.jpg",
+                image: "https://praiadoforte.org.br/wp-content/uploads/2024/05/sorveteria-60-sabores.jpg",
 
             },
             {
                 title: "Padaria Nova Era",
                 description: "Pães quentinhos e fresquinhos todos os dias.",
-                image: "padaria-nova-era.jpg",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdMICvO5AdPuhxkamx68Ez1DpsZFNazPVmbQ&s",
 
             },
             {
                 title: "Restaurante Bom Sabor",
                 description: "Comida caseira com aquele gostinho especial.",
-                image: "restaurante-bom-sabor.jpg",
+                image: "https://dwsemanadedesign.com.br/wp-content/uploads/2022/12/pingyangsp_1681758139_3083133193474159437_56007568342.jpg",
 
             },
         ],
